@@ -5,8 +5,18 @@ import {useState} from "react";
 const UserChat_0  = ({messages, setMessages}) => {
 
   const [groupList0, setGroupList0] = useState([]);
+
+  const messageList = document.getElementById('messageList-0');
+  const scrollHeight = messageList.scrollHeight;
+  const height = messageList.clientHeight;
+  const maxScrollTop = scrollHeight - height+100;
+  setTimeout(()=>{
+    messageList.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
+  }, 100)
+
   return (
       <div className="a">
+
         <div className="chat-container">
           <div className="header">
             <h1>Внутренний чат</h1>
@@ -99,6 +109,15 @@ const UserChat_0  = ({messages, setMessages}) => {
 }
 const UserChat_1 = ({messages, setMessages}) => {
   const [groupList1, setGroupList1] = useState([]);
+
+  const messageList = document.getElementById('messageList-1');
+  const scrollHeight = messageList.scrollHeight;
+  const height = messageList.clientHeight;
+  const maxScrollTop = scrollHeight - height+100;
+  setTimeout(()=>{
+    messageList.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
+  }, 100)
+
   return (
   <div className="a">
     <div className="chat-container">
