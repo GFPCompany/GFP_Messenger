@@ -2,18 +2,21 @@ import logo from './logo.svg';
 import './App.css';
 import "./style.css"
 import {useState} from "react";
-
 const UserChat_0  = ({messages, setMessages}) => {
 
   const [groupList0, setGroupList0] = useState([]);
 
-  const messageList = document.getElementById('messageList-0');
-  const scrollHeight = messageList.scrollHeight;
-  const height = messageList.clientHeight;
-  const maxScrollTop = scrollHeight - height+100;
-  setTimeout(()=>{
-    messageList.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
-  }, 100)
+  const scrollToBottom = () => {
+    const messageList = document.getElementById('messageList-0');
+    if(!messageList) return
+    const scrollHeight = messageList.scrollHeight;
+    const height = messageList.clientHeight;
+    const maxScrollTop = scrollHeight - height+100;
+    setTimeout(()=>{
+      messageList.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
+    }, 10)
+  };
+  scrollToBottom()
 
   return (
       <div className="a">
@@ -111,13 +114,17 @@ const UserChat_0  = ({messages, setMessages}) => {
 const UserChat_1 = ({messages, setMessages}) => {
   const [groupList1, setGroupList1] = useState([]);
 
-  const messageList = document.getElementById('messageList-1');
-  const scrollHeight = messageList.scrollHeight;
-  const height = messageList.clientHeight;
-  const maxScrollTop = scrollHeight - height+100;
-  setTimeout(()=>{
-    messageList.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
-  }, 100)
+  const scrollToBottom = () => {
+    const messageList = document.getElementById('messageList-1');
+    if(!messageList) return
+    const scrollHeight = messageList.scrollHeight;
+    const height = messageList.clientHeight;
+    const maxScrollTop = scrollHeight - height+100;
+    setTimeout(()=>{
+      messageList.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
+    }, 10)
+  };
+  scrollToBottom()
 
   return (
   <div className="a">
