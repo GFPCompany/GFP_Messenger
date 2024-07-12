@@ -95,6 +95,9 @@
     background-color: #007bff;
     color: white;
 }
+.user-message span{
+    color: white
+}
 
 .other-message {
     align-self: flex-start;
@@ -189,6 +192,9 @@ form {
 
 .dark-theme .user-message {
     background-color: #1a73e8;
+}
+.dark-theme .other-message span{
+    color: white
 }
 
 .dark-theme .other-message {
